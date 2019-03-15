@@ -66,7 +66,8 @@ public class RoseAppContext extends AbstractXmlApplicationContext {
      * @param beanType - Bean 的类型
      * 
      * @throws BeansException
-     */
+     * 
+     *      */
     public <T> T getBean(Class<T> beanType) throws BeansException {
         return beanType.cast(BeanFactoryUtils.beanOfTypeIncludingAncestors(this, beanType));
     }
